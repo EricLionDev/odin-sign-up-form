@@ -4,19 +4,62 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Photo Credits -->
-    Photo by
-    <a
-      href="https://unsplash.com/@nathananderson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      >Nathan Anderson</a
-    >
-    on
-    <a
-      href="https://unsplash.com/backgrounds?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      >Unsplash</a
-    >
+    <!-- Sidebar Area -->
+    <div class="sidebar">
+      <div class="sidebar-img-container"></div>
+      <div class="sidebar-img">
+        <img
+          src="/imgs/tania-miron-EKX3Lx-t5CM-unsplash.jpg"
+          alt=""
+          srcset=""
+        />
+        <!-- Photo Credits -->
+        <span class="photo-credits"
+          >Photo by
+          <a
+            href="https://unsplash.com/@_xotm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            class="credt-link"
+            target="_blank"
+            >Tania Mirón</a
+          >
+          on
+          <a
+            href="https://unsplash.com/backgrounds/colors?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            class="credt-link"
+            target="_blank"
+            >Unsplash</a
+          >
+        </span>
+      </div>
+    </div>
+
+    <!-- Hero Area -->
+    <div class="input-area">
+      <p class="hero-text">
+        This is not a real online service! You know you need something like this
+        in your life to help you realize your deepest dreams. Sign up now to get
+        startted.
+      </p>
+
+      <!-- Sign Up Area -->
+      <div class="signup-form-container">
+        <label for="first-name" class="form-label">First Name</label
+        ><input type="text" /><label for="last-name" class="form-label"
+          >Last Name</label
+        ><input type="text" /><label for="email" class="form-label">Email</label
+        ><input type="email" /><label for="phone" class="form-label"
+          >Phone Number</label
+        ><input type="number" /><label for="password" class="form-label"
+          >Password</label
+        ><input type="text" /><label for="password" class="form-label"
+          >Confirm Password</label
+        ><input type="text" />
+      </div>
+      <div class="submit-area"></div>
+    </div>
   </body>
 </html>
