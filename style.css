@@ -4,7 +4,7 @@
   padding: 0;
 }
 :root {
-  --sidebar-text-color: rgb(230, 224, 224);
+  --sidebar-text-color: rgb(255, 255, 255);
   --sidebar-bg-color: rgba(24, 24, 24, 0.349);
 }
 .credt-link {
@@ -15,16 +15,37 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
+
+/* Sidebar Img */
+
 .sidebar-img {
   position: relative;
 }
 
-.sidebar-img img {
+.bg-img {
   position: relative;
   object-fit: cover;
   display: block;
   width: 35vw;
   height: 100vh;
+  z-index: 0;
+}
+
+.side-img-txt {
+  color: white;
+  /* border: 5px red solid; */
+  font-size: 6rem;
+  margin-left: 10vw;
+  font-family: Lalezar;
+}
+
+.front-img {
+  position: absolute;
+  max-height: 20%;
+  top: 35%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 .photo-credits {
   color: var(--sidebar-text-color);
@@ -34,15 +55,144 @@ body {
   right: 0;
   bottom: 10px;
   margin: auto;
-  /* background-color: var(--sidebar-bg-color); */
 }
+.bg-darken {
+  background-color: rgba(0, 0, 0, 0.63);
+  padding: 12vh;
+  height: 100%;
+  width: 45.5vw;
+  z-index: 1;
+}
+.img-overlay {
+  display: flex;
+}
+/* Hero Text */
+
+.hero-text {
+  position: relative;
+  margin-right: 20vw;
+  font-family: Oswald;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding-top: 10vh;
+}
+.hero-text span {
+  position: absolute;
+  left: 3vw;
+  bottom: 5vh;
+}
+
+/* Signup Area */
 
 .input-area {
   display: grid;
   background-color: #f9fafb;
 }
-
 .signup-form-container {
+  display: grid;
+  position: relative;
+  grid-template-columns: 15vw 15vw;
+  column-gap: 5vw;
   background-color: #ffffff;
-  box-shadow: 0px 6px 0.3rem rgba(0, 0, 0, 0.226);
+  box-shadow: 0px 0px 0.7rem rgba(0, 0, 0, 0.226);
+}
+
+.form-item {
+  display: grid;
+  margin-left: 2vw;
+}
+
+.form-label {
+  position: relative;
+}
+.form-input {
+  border-width: 1px;
+  border-radius: 5px;
+  height: 4vh;
+  width: 15vw;
+  border-color: rgba(233, 235, 238, 0.438);
+  background-color: rgb(255, 254, 254);
+  padding-left: 0.25vw;
+}
+
+.form-input:focus {
+  outline: none;
+  border: 2px rgb(247, 136, 134) solid;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.349);
+}
+
+.form-label span {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 0.5vh;
+  font-family: "Varela Round";
+  font-size: 0.8rem;
+}
+
+.form-header {
+  padding-top: 1vh;
+}
+
+.form-header span {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-size: 1.75rem;
+  color: rgb(80, 80, 80);
+}
+
+/* create acc button area */
+.submit-area {
+  display: grid;
+  max-height: 275px;
+}
+
+.create-btn {
+  position: relative;
+  color: white;
+  font-weight: 800;
+  height: 5vh;
+  width: 10vw;
+  top: 3vh;
+  left: 2vw;
+  border: none;
+  border-radius: 0.25vw;
+  background-color: #f78886;
+}
+.create-btn:hover {
+  background-color: #eb8281;
+}
+.create-btn:active {
+  background-color: #f78886;
+}
+
+.create-txt {
+  position: relative;
+  top: -7vh;
+  left: 2vw;
+  font-family: Oswald;
+  font-weight: 300;
+  font-size: 1.15rem;
+  max-width: 15vw;
+}
+
+.create-txt a {
+  text-decoration: none;
+  color: #f78886;
+  font-weight: 500;
+}
+
+#validation-error {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0.5vh;
+  left: 0;
+  color: red;
+  font-family: "Varela Round";
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.error {
+  border: 1px red solid;
 }

@@ -6,17 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-Up Form</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lalezar&family=Oswald:wght@200;300;500;700&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Sidebar Area -->
     <div class="sidebar">
-      <div class="sidebar-img-container"></div>
       <div class="sidebar-img">
+        <div class="img-overlay">
+          <img class="front-img" src="/imgs/odin-lined.png" alt="" srcset="" />
+          <p class="side-img-txt front-img">ODIN</p>
+          <div class="bg-darken front-img"></div>
+        </div>
+
         <img
-          src="/imgs/tania-miron-EKX3Lx-t5CM-unsplash.jpg"
+          class="bg-img"
+          src="/imgs/aedrian-RpqhC4T9Fxs-unsplash.jpg"
           alt=""
           srcset=""
         />
+
         <!-- Photo Credits -->
         <span class="photo-credits"
           >Photo by
@@ -40,26 +53,78 @@
     <!-- Hero Area -->
     <div class="input-area">
       <p class="hero-text">
-        This is not a real online service! You know you need something like this
-        in your life to help you realize your deepest dreams. Sign up now to get
-        startted.
+        <span class=""
+          >This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams.
+
+          <br />Sign up <em>now</em> to get started. <br />
+          <br />
+          You <em>know </em> you want to.</span
+        >
       </p>
 
       <!-- Sign Up Area -->
       <div class="signup-form-container">
-        <label for="first-name" class="form-label">First Name</label
-        ><input type="text" /><label for="last-name" class="form-label"
-          >Last Name</label
-        ><input type="text" /><label for="email" class="form-label">Email</label
-        ><input type="email" /><label for="phone" class="form-label"
-          >Phone Number</label
-        ><input type="number" /><label for="password" class="form-label"
-          >Password</label
-        ><input type="text" /><label for="password" class="form-label"
-          >Confirm Password</label
-        ><input type="text" />
+        <div class="form-header form-item form-label">
+          <span>Let's do this!</span>
+        </div>
+        <div class=""></div>
+        <div class="form-item">
+          <label for="first-name" class="form-label"
+            ><span class="">FIRST NAME</span></label
+          ><input class="form-input" type="text" autofocus />
+        </div>
+        <div class="form-item">
+          <label for="last-name" class="form-label"
+            ><span class="">LAST NAME</span></label
+          ><input class="form-input" type="text" />
+        </div>
+        <div class="form-item">
+          <label for="email" class="form-label"
+            ><span class="">EMAIL</span></label
+          ><input class="form-input" type="email" />
+        </div>
+        <div class="form-item">
+          <label for="phone" class="form-label"
+            ><span class="">PHONE NUMBER</span></label
+          ><input class="form-input" type="tel" />
+        </div>
+        <div class="form-item">
+          <label for="password" class="form-label"
+            ><span class="">PASSWORD</span></label
+          ><input
+            id="initial-pass"
+            class="form-input"
+            type="password"
+            name="inital-pass"
+            required
+          />
+          <span id="validation-error" class="form-item"
+            >* please confirm your passwords match</span
+          >
+        </div>
+        <div class="form-item">
+          <label for="password" class="form-label"
+            ><span class="">CONFIRM PASSWORD</span></label
+          ><input
+            id="confirm-pass"
+            class="form-input"
+            type="password"
+            name="confirm-pass"
+            required
+          />
+        </div>
       </div>
-      <div class="submit-area"></div>
+
+      <div class="submit-area">
+        <button class="create-btn" onclick="validate()">Create Account</button>
+        <p class="create-txt">
+          Already have an account? <a href="#">Log in</a>
+        </p>
+      </div>
     </div>
+
+    <!-- Account Create Button Area -->
   </body>
+  <script src="app.js"></script>
 </html>
